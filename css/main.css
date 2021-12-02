@@ -1,0 +1,20 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    display: inline-block;
+    width: 800px;
+    margin-left: calc((100% - 800px) / 2);
+}
+
+header {
+    display: inline-block;
+}
+header>img {
+    float: left;
+}
+
+nav {
+    float: right;
+}
