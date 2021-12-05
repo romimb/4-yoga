@@ -1,70 +1,98 @@
+:root {
+    --oranzine: #ff4622;
+    --plotis: 1000px;
+    --soninis-atstumas: calc((100% - var(--plotis)) / 2);
+    --main-width: calc(var(--plotis) + var(--soninis-atstumas));
+    --text-width: calc(var(--plotis) * 0.45);
+    --text-margin: calc(var(--plotis) * 0.05);
+    --image-width: calc(100% - var(--plotis) / 2);
+}
+
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-main {
-    display: inline-block;
-    width: 1000px;
-    margin-left: calc((100% - 1000px) / 2);
-}
-
 header {
     display: inline-block;
-    width: 100%;
-    margin-top: 20px;
+    width: var(--plotis);
+    margin-left: var(--soninis-atstumas);
 }
 header>img {
     float: left;
-    height: 60px;
+    height: 40px;
 }
 
 nav {
-    display: block;
     float: right;
-    margin-top: 25px;
-    text-decoration: underline, none;
+    margin-top: 20px;
 }
 
-a {
-    display: inline-block;
-    text-decoration: none;
-    color: #2C224C;
+nav > a {
+    font-size: 18px;
     line-height: 20px;
-    font-size: 20px;
-    padding: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 5px solid transparent;
+    text-decoration: none;
+    color: #2c253e;
+    margin-left: 20px;
+    border-bottom: 3px solid transparent;
 }
 
-a:hover {
-    border-bottom: 2px solid #FF4622;
+nav > a:hover {
+    border-color: var(--oranzine);
 }
 
-section {
+nav > a:first-child {
+    margin-left: 0;
+    border-color: var(--oranzine);
+}
+
+main {
     display: inline-block;
-    width: 100%;
-    margin-top: 40px;
+    width: var(--main-width);
+    margin-left: var(--soninis-atstumas);
+    margin-top: 50px;
 }
 
 div {
     float: left;
-    margin-right: 5%;
-    margin-top: 40px;
-    width: 45%;
+    width: var(--text-width);
+    margin-right: var(--text-margin);
+    margin-top: 50px;
 }
 
 h1 {
-    font-size: 35px;
-    margin: 0px;
+    display: inline-block;
+    width: 100%;
+    font-size: 42px;
+    margin: 0;
+}
+
+h1 > span {
+    color: var(--oranzine);
 }
 
 p {
-    margin-top: 15px;
-    font-size: 15px;
+    display: inline-block;
+    width: 100%;
 }
 
-section>img {
-    width: 50%;
-    float: right;
+div > a {
+    display: inline-block;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 25px;
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--oranzine);
+    border: 1px solid #d1583f;
+    border-radius: 4px;
+}
+
+div > a:hover {
+    background-color: var(--oranzine);
+}
+
+main > img {
+    float: left;
+    width: var(--image-width);
 }
